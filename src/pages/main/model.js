@@ -21,5 +21,4 @@ const makeReducer$ = action$ => {
   )
 }
 
-
 module.exports = model(makeReducer$)
