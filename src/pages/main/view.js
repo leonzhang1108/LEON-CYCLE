@@ -1,4 +1,4 @@
-const view = state$ => state$.map(({ toggle, count }) => 
+const view = state$ => state$.map(({ toggle, count, slider }) => 
   <div>
     <div>
       <a>button</a>
@@ -8,6 +8,10 @@ const view = state$ => state$.map(({ toggle, count }) =>
       <botton className="dec">Decrement</botton>
       <botton className="inc">Increment</botton>
       <p>Counter: {count}</p>
+    </div>
+    <div>
+      <label>{slider}</label>
+      <input className="slider" type="range" min='0' max='100' value={slider}/>
     </div>
   </div>
 )

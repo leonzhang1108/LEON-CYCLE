@@ -2,24 +2,31 @@ import xs from 'xstream'
 import { model } from '../../utils'
 import { main as mainType } from '../../common/type.js'
 
-const makeReducer$ = action$ => {
-  let toggle$ = action$
+const makeReducer$ = action$ => xs.merge(
+
+  // toggle
+  action$
     .filter(action => action.type === mainType.TOOGLE)
     .mapTo(data => ({
       ...data,
       toggle: !data.toggle
-    }))
-
-  let count$ = action$
+    })),
+  
+  // count
+  action$
     .filter(action => action.type === mainType.COUNT)
     .map(action => data => ({
       ...data,
       count: data.count + action.v
-    }))
+    })),
 
-  return xs.merge(
-    toggle$, count$
-  )
-}
+  //value
+  action$
+    .filter(action => action.type === mainType.SLIDER)
+    .map(action => data => ({
+      ...data,
+      slider: action.v
+    }))
+)
 
 module.exports = model(makeReducer$)

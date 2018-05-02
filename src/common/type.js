@@ -1,6 +1,7 @@
 module.exports = {
   main: {
     TOOGLE: 'toggle',
-    COUNT: 'count'
+    COUNT: 'count',
+    SLIDER: 'slider'
   }
 }
