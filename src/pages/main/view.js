@@ -1,12 +1,12 @@
 const view = state$ => state$.map(({ toggle, count, slider }) => 
   <div className="wrapper">
     <div>
-      <button className="toggle">button</button>
+      <a className="toggle">toggle</a>
       <p>{toggle ? 'ON' : 'OFF'}</p>
     </div>
     <div>
-      <button className="dec">Decrement</button>
-      <button className="inc">Increment</button>
+      <a className="dec">dec</a>
+      <a className="inc">inc</a>
       <p>Counter: {count}</p>
     </div>
     <div>
