@@ -41,6 +41,7 @@ module.exports = {
     alias: {
       '@utils': resolve('src/utils'),
       '@common': resolve('src/common'),
+      '@styles': resolve('src/styles'),
       '@components': resolve('src/components')
     }
   },
