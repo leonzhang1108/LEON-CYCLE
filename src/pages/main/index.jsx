@@ -1,8 +1,7 @@
 import xs from 'xstream'
-import { div, input, p } from '@cycle/dom'
-import intent from  './intent'
-import model from  './model'
-import view from  './view'
+import intent from './intent'
+import model from './model'
+import view from './view'
 import './index.less'
 
 const App = sources => {

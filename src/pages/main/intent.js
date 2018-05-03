@@ -3,7 +3,7 @@ import { main as mainType } from '../../common/type.js'
 
 const intent = sources => xs.merge( 
 
-  sources.DOM.select('a').events('click')
+  sources.DOM.select('.toggle').events('click')
     .mapTo({ type: mainType.TOOGLE }),
 
   sources.DOM.select('.dec').events('click').mapTo(-1)
