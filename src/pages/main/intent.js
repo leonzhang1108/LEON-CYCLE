@@ -1,5 +1,5 @@
 import xs from 'xstream'
-import { main as mainType } from '../../common/type.js'
+import { main as mainType } from '@common/type.js'
 
 const intent = sources => xs.merge( 
 

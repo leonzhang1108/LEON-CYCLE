@@ -16,6 +16,8 @@ const paths = {
   public: '/'
 }
 
+const resolve = dir => path.join(__dirname, '..', dir)
+
 module.exports = {
   entry: {
     main: [
@@ -30,7 +32,11 @@ module.exports = {
     path: paths.appBuild
   },
   resolve: {
-    extensions: ['.js', '.ts', '.tsx', '.jsx', '.json']
+    extensions: ['.js', '.ts', '.tsx', '.jsx', '.json'],
+    alias: {
+      '@utils': resolve('src/utils'),
+      '@common': resolve('src/common')
+    }
   },
   module: {
     rules: [

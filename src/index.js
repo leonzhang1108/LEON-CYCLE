@@ -10,7 +10,7 @@ const drivers = {
   props: () => xs.of({
     toggle: true,
     count: 0,
-    slider: 0
+    slider: 20
   }),
   DOM: makeDOMDriver('#root'),
   // HTTP: makeHTTPDriver()

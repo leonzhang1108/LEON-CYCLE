@@ -16,6 +16,8 @@ const paths = {
   public: '/'
 }
 
+const resolve = dir => path.join(__dirname, '..', dir)
+
 module.exports = {
   entry: {
     main: [
@@ -35,7 +37,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: {
+      '@utils': resolve('src/utils'),
+      '@common': resolve('src/common')
+    }
   },
   output: {
     // This does not produce a real file. It's just the virtual path that is
