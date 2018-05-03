@@ -1,6 +1,6 @@
-const view = state$ => state$.map(({ slider }) => 
+const view = (state$, random) => state$.map(({ slider }) => 
   <div>
-    <input className="slider" type="range" min='20' max='100' value={slider}/>
+    <input className={`slider${random}`} type="range" min='20' max='100' value={slider}/>
     <label>{slider}</label>
     <div style={{
       backgroundColor: '#58D3D8', 

@@ -3,7 +3,6 @@ import intent from './intent'
 import model from './model'
 import view from './view'
 import './index.less'
-
 import { div } from '@cycle/dom'
 
 import Slider from '@components/Slider'

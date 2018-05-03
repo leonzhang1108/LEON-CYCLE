@@ -1,5 +1,5 @@
 const view = state$ => state$.map(({ toggle, count, slider }) => 
-  <div className="wrapper">
+  <div>
     <div>
       <a className="toggle">toggle</a>
       <p>{toggle ? 'ON' : 'OFF'}</p>
