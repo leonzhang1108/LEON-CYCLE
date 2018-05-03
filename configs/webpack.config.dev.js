@@ -40,7 +40,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
       '@utils': resolve('src/utils'),
-      '@common': resolve('src/common')
+      '@common': resolve('src/common'),
+      '@components': resolve('src/components')
     }
   },
   output: {

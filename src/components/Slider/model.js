@@ -4,20 +4,12 @@ import { main as mainType } from '../../common/type.js'
 
 const makeReducer$ = action$ => xs.merge(
 
-  // toggle
+  //slider
   action$
-    .filter(action => action.type === mainType.TOOGLE)
-    .mapTo(data => ({
-      ...data,
-      toggle: !data.toggle
-    })),
-  
-  // count
-  action$
-    .filter(action => action.type === mainType.COUNT)
+    .filter(action => action.type === mainType.SLIDER)
     .map(action => data => ({
       ...data,
-      count: data.count + action.v
+      slider: action.v
     }))
 )
 

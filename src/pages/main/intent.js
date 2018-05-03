@@ -10,11 +10,7 @@ const intent = sources => xs.merge(
     .map(v => ({ v, type: mainType.COUNT })),
 
   sources.DOM.select('.inc').events('click').mapTo(+1)
-    .map(v => ({ v, type: mainType.COUNT })),
-
-  sources.DOM.select('.slider').events('input')
-    .map(e => e.target.value)
-    .map(v => ({ v, type: mainType.SLIDER }))
+    .map(v => ({ v, type: mainType.COUNT }))
     
 )
 

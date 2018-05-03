@@ -35,7 +35,8 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx', '.jsx', '.json'],
     alias: {
       '@utils': resolve('src/utils'),
-      '@common': resolve('src/common')
+      '@common': resolve('src/common'),
+      '@components': resolve('src/components')
     }
   },
   module: {
